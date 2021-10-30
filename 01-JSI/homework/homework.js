@@ -127,9 +127,9 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Tu código:
-  if (letra.length > 1){
-    return 'Dato incorrecto';
-  }else if (letra === 'a' || lentra === 'e' || letra ==='i' || letra === 'o' || letra === 'u' || letra === 'A' || lentra === 'E' || letra ==='I' || letra === 'O' || letra === 'U'){
+  if(letra.length > 1) return 'Dato incorrecto';
+
+  if(letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
     return 'Es vocal';
   }
 }
@@ -139,7 +139,13 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-
+  if(x > y){
+    return x;
+  }else if(x < y){
+    return y;
+  }else if( x === y){
+    return x;
+  }
 }
 
 /*
@@ -162,21 +168,40 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   // Tu código:
-
+  switch(color){
+    case 'blue':
+      return 'This is blue';
+    case 'red' :
+      return 'This is red';
+    case 'green': 
+      return 'This is green';
+    case 'orange':
+      return 'This is orange';
+    default:
+      return 'Color not found';
+  }
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-
+  if(numero === 10 || numero ===5){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-
+  if(numero < 50 && numero >20){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function esPrimo(numero) {
@@ -186,7 +211,9 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
-
+  if(numero === 0 || numero === 1){
+    return false;
+  }
 }
 
 function doWhile(numero) {
@@ -194,7 +221,12 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Pueden usar un while o un bucle do ... while (Investigarlo si quieren hacerlo de la segunda forma)
   // Tu código:
-  
+  var limite = 0;
+  while(limite < 8){
+    numero = numero + 5;
+    limite ++;
+  }
+  return numero;
 }
 
 
