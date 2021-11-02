@@ -133,7 +133,18 @@ function breakStatement(numero) {
   // devolver: "Se interrumpió la ejecución"
   // Pista: usá el statement 'break'
   // Tu código:
-
+  var nuevoArr = [];
+  for (var i = 0; i < 10; i++) {
+    numero = numero + 2;
+    if(numero === i){
+      break;
+    }
+    nuevoArr.push(numero);
+  }
+  if(i < 10){
+    return 'Se interrumpió la ejecución';
+  }
+  return nuevoArr;
 }
 
 function continueStatement(numero) {
@@ -144,7 +155,15 @@ function continueStatement(numero) {
   // y se continua con la siguiente iteración
   // Pista: usá el statement 'continue'
   // Tu código:
-  
+  var nuevoArray = [];
+  for (let i = 0; i < 10; i++) {
+    numero = numero + 2;
+    if(i===5){
+      continue;
+    }
+    nuevoArray.push(numero);
+  }
+  return nuevoArray;
 }
 
 function crearGato(nombre, edad) {
